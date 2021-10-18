@@ -1,5 +1,5 @@
 import { mount } from "auth/AuthApp";
-import React, { useRef, useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { useHistory } from "react-router-dom";
 
 export default () => {
@@ -13,6 +13,9 @@ export default () => {
         if (history.location.pathname !== nextPathname) {
           history.push(nextPathname);
         }
+      },
+      onSignIn: () => {
+        console.log("user has logged in!");
       },
     });
 
