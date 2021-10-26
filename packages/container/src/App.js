@@ -35,7 +35,7 @@ export default () => {
     <Router history={history}>
       <StylesProvider generateClassName={generateClassName}>
         <div>
-          {/* <button onClick={onClick}>{reactVersion}</button> */}
+          <button onClick={onClick}>{reactVersion}</button>
           <Header
             isSignedIn={isSignedIn}
             onSignOut={() => setSignedIn(false)}

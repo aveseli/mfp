@@ -22,7 +22,7 @@ export default ({ history }) => {
 
   return (
     <div>
-      {/* <button onClick={onClick}>{reactVersion}</button> */}
+      <button onClick={onClick}>{reactVersion}</button>
       <StylesProvider generateClassName={generateClassName}>
         <Router history={history}>
           <Switch>
