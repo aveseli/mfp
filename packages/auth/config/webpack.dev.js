@@ -25,7 +25,6 @@ const devConfig = {
       exposes: {
         "./AuthApp": "./src/bootstrap",
       },
-      shared: packageJson.dependencies,
     }),
   ],
 };

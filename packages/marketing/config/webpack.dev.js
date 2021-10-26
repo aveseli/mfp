@@ -25,7 +25,6 @@ const devConfig = {
       exposes: {
         "./MarketingApp": "./src/bootstrap",
       },
-      shared: packageJson.dependencies,
     }),
   ],
 };

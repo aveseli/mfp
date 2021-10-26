@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Switch, Route, Router } from "react-router-dom";
 import {
   StylesProvider,
@@ -13,8 +13,16 @@ const generateClassName = createGenerateClassName({
 });
 
 export default ({ history }) => {
+  const [reactVersion, setReactVersion] = useState(React.version);
+
+  const onClick = () => {
+    setReactVersion(React.version);
+    console.log(React.version);
+  };
+
   return (
     <div>
+      {/* <button onClick={onClick}>{reactVersion}</button> */}
       <StylesProvider generateClassName={generateClassName}>
         <Router history={history}>
           <Switch>

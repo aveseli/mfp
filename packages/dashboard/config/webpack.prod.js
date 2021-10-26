@@ -16,7 +16,6 @@ const prodConfig = {
       exposes: {
         './DashboardApp': './src/bootstrap',
       },
-      shared: packageJson.dependencies,
     }),
   ],
 };

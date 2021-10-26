@@ -25,7 +25,6 @@ const devConfig = {
       exposes: {
         './DashboardApp': './src/bootstrap',
       },
-      shared: packageJson.dependencies,
     }),
     new HtmlWebpackPlugin({
       template: './public/index.html',
