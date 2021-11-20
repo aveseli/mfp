@@ -13,16 +13,10 @@ const generateClassName = createGenerateClassName({
 });
 
 export default ({ history }) => {
-  const [reactVersion, setReactVersion] = useState(React.version);
-
-  const onClick = () => {
-    setReactVersion(React.version);
-    console.log(React.version);
-  };
+  const [appVersion] = useState("marketing: " + new Date());
 
   return (
     <div>
-      <button onClick={onClick}>{reactVersion}</button>
       <StylesProvider generateClassName={generateClassName}>
         <Router history={history}>
           <Switch>
