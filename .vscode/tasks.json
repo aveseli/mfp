@@ -1,0 +1,37 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "start",
+			"path": "packages/auth/",
+			"problemMatcher": [],
+			"label": "start auth",
+			"detail": "webpack serve --config config/webpack.dev.js"
+		},
+		{
+			"type": "npm",
+			"script": "start",
+			"path": "packages/container/",
+			"problemMatcher": [],
+			"label": "start container",
+			"detail": "webpack serve --config config/webpack.dev.js"
+		},
+		{
+			"type": "npm",
+			"script": "start",
+			"path": "packages/dashboard/",
+			"problemMatcher": [],
+			"label": "start dashboard",
+			"detail": "webpack serve --config config/webpack.dev.js"
+		},
+		{
+			"type": "npm",
+			"script": "start",
+			"path": "packages/marketing/",
+			"problemMatcher": [],
+			"label": "start marketing",
+			"detail": "webpack serve --config config/webpack.dev.js"
+		}
+	]
+}
