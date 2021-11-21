@@ -7,8 +7,7 @@ const mount = (el, { onNavigate, onSignIn, defaultHistory, initialPath }) => {
   const history =
     defaultHistory ||
     createMemoryHistory({
-      initialEntries: [initialPath]
-      ,
+      initialEntries: [initialPath],
     });
 
   if (onNavigate) {
@@ -22,6 +21,9 @@ const mount = (el, { onNavigate, onSignIn, defaultHistory, initialPath }) => {
       if (history.location.pathname !== nextPathname) {
         history.push(nextPathname);
       }
+    },
+    unmount() {
+      ReactDOM.unmountComponentAtNode(el);
     },
   };
 };

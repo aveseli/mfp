@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, ReactDOM } from "react";
 import { Switch, Route, Router } from "react-router-dom";
 import {
   StylesProvider,
@@ -12,8 +12,8 @@ const generateClassName = createGenerateClassName({
   productionPrefix: "ma",
 });
 
-export default ({ history }) => {
-  const [appVersion] = useState("marketing: " + new Date());
+export default ({ history, el, unmountFunc }) => {
+  const [appName] = useState("marketing");
 
   return (
     <div>

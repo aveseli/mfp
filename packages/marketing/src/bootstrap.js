@@ -22,6 +22,9 @@ const mount = (el, { onNavigate, defaultHistory, initialPath }) => {
         history.push(nextPathname);
       }
     },
+    unmount() {
+      ReactDOM.unmountComponentAtNode(el);
+    }
   };
 };
 

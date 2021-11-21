@@ -7,7 +7,7 @@ export default ({ onSignIn }) => {
   const history = useHistory();
 
   useEffect(() => {
-    const { onParentNavigate } = mount(ref.current, {
+    const { onParentNavigate, unmount } = mount(ref.current, {
       initialPath: history.location.pathname,
       onNavigate: ({ pathname: nextPathname }) => {
         if (history.location.pathname !== nextPathname) {
@@ -20,6 +20,10 @@ export default ({ onSignIn }) => {
     });
 
     history.listen(onParentNavigate);
+
+    return () => {
+      unmount();
+    };
   }, []);
 
   return <div ref={ref}></div>;

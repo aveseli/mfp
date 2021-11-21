@@ -32,6 +32,16 @@
 			"problemMatcher": [],
 			"label": "start marketing",
 			"detail": "webpack serve --config config/webpack.dev.js"
+		},
+		{
+			"label": "start all",
+			"dependsOn": [
+				"start container",
+				"start marketing",
+				"start auth",
+				"start dashboard"
+			],
+			"problemMatcher": []
 		}
 	]
 }
