@@ -8,7 +8,7 @@ const mount = (el) => {
 
   return {
     unmount() {
-      console.log("unmounting dashboard vue app");
+      console.log("unmounting dashboard vue app!");
       app.unmount(el);
     },
   };
