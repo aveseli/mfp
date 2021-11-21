@@ -6,11 +6,9 @@ const mount = (el) => {
   const app = createApp(Dashboard);
   app.mount(el);
 
-  return {
-    unmount: () => {
-      console.log("unmounting dashboard vue app!");
-      app.unmount(el);
-    },
+  return function () {
+    console.log("unmounting dashboard vue app!");
+    app.unmount(el);
   };
 };
 
