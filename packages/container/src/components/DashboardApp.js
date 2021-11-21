@@ -5,11 +5,12 @@ export default () => {
   const ref = useRef(null);
 
   useEffect(() => {
-    const { unmount } = mount(ref.current);
+    // const { unmount } = 
+    mount(ref.current);
 
-    return () => {
+    /* return () => {
       unmount();
-    };
+    }; */
   }, []);
 
   return <div ref={ref}></div>;
