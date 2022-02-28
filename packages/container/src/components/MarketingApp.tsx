@@ -1,21 +1,19 @@
-import { mount } from "auth/AuthApp";
+import { mount } from "marketing/MarketingApp";
 import React, { useEffect, useRef } from "react";
 import { useHistory } from "react-router-dom";
 
-export default ({ onSignIn }) => {
+export default () => {
   const ref = useRef(null);
   const history = useHistory();
 
   useEffect(() => {
+    console.log("calling mount", ref.current)
     const { onParentNavigate, unmount } = mount(ref.current, {
       initialPath: history.location.pathname,
       onNavigate: ({ pathname: nextPathname }) => {
         if (history.location.pathname !== nextPathname) {
           history.push(nextPathname);
         }
-      },
-      onSignIn: () => {
-        onSignIn();
       },
     });
 

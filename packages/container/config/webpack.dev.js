@@ -3,6 +3,7 @@ const commonConfig = require("./webpack.common");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 
 const devConfig = {
+  devtool: "source-map",
   mode: "development",
   output: {
     publicPath: "http://localhost:8080/",

@@ -1,9 +1,17 @@
-import React from "react";
-import { withRouter } from "react-router";
-import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
+import Typography from "@material-ui/core/Typography";
+import React from "react";
+import { withRouter, RouteComponentProps } from "react-router";
 
-class ErrorBoundary extends React.Component {
+type Props = {
+  history: any;
+} & RouteComponentProps<{}>;
+
+type State = {
+  hasError: boolean;
+};
+
+class ErrorBoundary extends React.Component<Props, State> {
   constructor(props) {
     super(props);
     this.state = {
@@ -29,24 +37,20 @@ class ErrorBoundary extends React.Component {
   }
 
   reloadPage = () => {
-      console.log("reload page!!");
-      history.go(0);
-  }
+    console.log("reload page!!");
+    this.props.history.go(0);
+  };
 
   render() {
     if (this.state.hasError) {
       // You can render any custom fallback UI
       return (
         <React.Fragment>
-          <Typography variant="h6" color="inherit" noWrap to="/">
-            Oooops ... something went wrong while loading required app!!! Try to reload the page!
+          <Typography variant="h6" color="inherit" noWrap>
+            Oooops ... something went wrong while loading required app!!! Try to
+            reload the page!
           </Typography>
-          <Button
-            color="primary"
-            variant="outlined"
-            onClick={this.reloadPage}
-
-          >
+          <Button color="primary" variant="outlined" onClick={this.reloadPage}>
             Reload
           </Button>
         </React.Fragment>
