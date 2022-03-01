@@ -10,9 +10,9 @@ export default () => {
     console.log("calling mount", ref.current)
     const { onParentNavigate, unmount } = mount(ref.current, {
       initialPath: history.location.pathname,
-      onNavigate: ({ pathname: nextPathname }) => {
-        if (history.location.pathname !== nextPathname) {
-          history.push(nextPathname);
+      onNavigate: ({ pathname }: any) => {
+        if (history.location.pathname !== pathname) {
+          history.push(pathname);
         }
       },
     });

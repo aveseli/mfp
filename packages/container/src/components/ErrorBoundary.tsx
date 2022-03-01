@@ -12,7 +12,7 @@ type State = {
 };
 
 class ErrorBoundary extends React.Component<Props, State> {
-  constructor(props) {
+  constructor(props: Props) {
     super(props);
     this.state = {
       hasError: false,
@@ -20,7 +20,7 @@ class ErrorBoundary extends React.Component<Props, State> {
 
     // reset the error state when user navigates to another location!
     const { history } = this.props;
-    history.listen((location, action) => {
+    history.listen((location: any, action: any) => {
       if (this.state.hasError) {
         this.setState({
           hasError: false,
@@ -29,7 +29,7 @@ class ErrorBoundary extends React.Component<Props, State> {
     });
   }
 
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error: any) {
     // Update state so the next render will show the fallback UI.
     return {
       hasError: error ? true : false,

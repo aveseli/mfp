@@ -5,10 +5,9 @@ import { Redirect, Route, Router, Switch } from "react-router-dom";
 import ErrorBoundary from "./components/ErrorBoundary";
 import Header from "./components/Header";
 import Progress from "./components/Progress";
-
 const MarketingApp = lazy(() => import("./components/MarketingApp"));
-// const AuthApp = lazy(() => import("./components/AuthApp"));
-// const DashboardApp = lazy(() => import("./components/DashboardApp"));
+const AuthApp = lazy(() => import("./components/AuthApp"));
+const DashboardApp = lazy(() => import("./components/DashboardApp"));
 
 const generateClassName = createGenerateClassName({
   productionPrefix: "co",
@@ -37,11 +36,11 @@ export default () => {
             <Suspense fallback={<Progress />}>
               <Switch>
                 <Route path="/auth">
-                  {/* <AuthApp onSignIn={() => setSignedIn(true)} /> */}
+                  <AuthApp onSignIn={() => setSignedIn(true)} />
                 </Route>
                 <Route path="/dashboard">
                   {!isSignedIn && <Redirect to="/auth/signup" />}
-                  {/* <DashboardApp /> */}
+                  <DashboardApp />
                 </Route>
                 <Route path="/">
                   <MarketingApp />

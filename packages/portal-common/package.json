@@ -1,0 +1,19 @@
+{
+  "name": "portal-common",
+  "version": "1.0.0",
+  "description": "types and common logic for portal integration",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aveseli/mfp.git"
+  },
+  "author": "Adnan Veseli",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aveseli/mfp/issues"
+  },
+  "homepage": "https://github.com/aveseli/mfp#readme"
+}

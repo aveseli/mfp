@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Header({ isSignedIn, onSignOut }) {
+export default function Header({ isSignedIn, onSignOut }: any) {
   const classes = useStyles();
 
   const onClick = () => {
