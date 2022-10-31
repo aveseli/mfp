@@ -7,9 +7,9 @@
   },
   "dependencies": {
     "chart.js": "^2.9.4",
-    "primeflex": "^2.0.0",
-    "primeicons": "^4.1.0",
-    "primevue": "^3.12.0",
+    "primeflex": "^3.2.1",
+    "primeicons": "^6.0.1",
+    "primevue": "^3.18.1",
     "vue": "^3.2.31"
   },
   "devDependencies": {
@@ -21,7 +21,7 @@
     "css-loader": "^5.2.7",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^4.5.2",
-    "node-sass": "^4.14.1",
+    "node-sass": "^6.0.1",
     "sass-loader": "^10.2.1",
     "style-loader": "^2.0.0",
     "vue-loader": "^16.8.3",
